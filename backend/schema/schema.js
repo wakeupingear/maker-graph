@@ -30,7 +30,7 @@ const AuthorType = new GraphQLObjectType({
             type: new GraphQLList(TutorialType),
             resolve(parent, args) {
                 //return contentData.filter(content => content.authorId === parent.id);
-                return Author.findById(parent.id);
+                return Tutorial.findById(parent.id);
             }
         }
     })
